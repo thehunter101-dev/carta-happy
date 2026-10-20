@@ -1,16 +1,101 @@
 ---
+import "../styles/global.css";
+import "../styles/custom.css";
+import TopBar from "../componets/TopBar.astro";
+import Carusel from "../componets/Carousel.astro";
+import Hero from "../componets/Hero.astro";
+import ElementoIteractivo from "../componets/ElementosIteractivos.astro";
+import CartaEmotiva from "../componets/CartaEmotiva.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>¡Feliz Cumpleaños! - Una Carta Especial</title>
+    <meta name="description" content="Una hermosa carta digital de cumpleaños llena de cariño, recuerdos y deseos especiales." />
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="¡Feliz Cumpleaños! - Una Carta Especial" />
+    <meta property="og:description" content="Una hermosa carta digital de cumpleaños llena de cariño, recuerdos y deseos especiales." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL(Astro.url).href} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="¡Feliz Cumpleaños! - Una Carta Especial" />
+    <meta name="twitter:description" content="Una hermosa carta digital de cumpleaños llena de cariño, recuerdos y deseos especiales." />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols Outlined -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-background text-on-surface antialiased selection:bg-primary-fixed selection:text-primary min-h-screen relative overflow-x-hidden paper-texture">
+    <canvas id="confetti-canvas"></canvas>
+    <TopBar />
+    <!-- Main Responsive Container -->
+    <main class="w-full max-w-[680px] mx-auto px-margin md:px-margin-md py-space-lg flex flex-col gap-space-xl">
+      <!-- Hero / Portada de Cumpleaños -->
+       <Hero/>
+      <!-- Carousel Section (Componente Principal de Recuerdos) -->
+       <Carusel/>
+      <!-- Carta Emotiva / Dedicatoria -->
+       <CartaEmotiva/>
+      <!-- Elementos Interactivos & Sorpresas -->
+       <ElementoIteractivo/>
+    </main>
+    <!-- Footer (Shared Component) -->
+    <footer class="w-full py-space-xl bg-surface-container-low shadow-[0_-4px_20px_-2px_rgba(220,165,76,0.12)] shadow-sm">
+      <div class="flex flex-col items-center justify-center gap-space-md text-center max-w-[680px] mx-auto px-margin">
+        <!-- Interactive Share / Dedication Action Buttons -->
+        <div class="flex flex-wrap justify-center items-center gap-space-sm w-full">
+          <button
+            class="px-5 py-2.5 rounded-full bg-surface text-primary border border-secondary-container/50 font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all active:scale-95 shadow-sm flex items-center gap-2"
+            id="share-btn"
+            aria-label="Compartir esta carta de cumpleaños"
+          >
+            <span class="material-symbols-outlined text-[18px]">share</span>
+            Compartir Recuerdo
+          </button>
+          <button
+            class="px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:text-primary-fixed transition-all active:scale-95 shadow-sm flex items-center gap-2"
+            id="send-wish-btn"
+            aria-label="Enviar un deseo de cumpleaños"
+          >
+            <span class="material-symbols-outlined text-[18px]">send</span>
+            Enviar un Deseo
+          </button>
+        </div>
+        <!-- Copyright Text verbatim from JSON -->
+        <p class="text-body-sm font-body-sm text-on-surface-variant dark:text-surface-variant">
+          Hecho con todo el amor del mundo ❤️
+        </p>
+      </div>
+    </footer>
+    <!-- Notification Toast for interactive feedback -->
+    <div
+      class="fixed bottom-6 left-1/2 -translate-x-1/2 px-5 py-2.5 rounded-full bg-inverse-surface text-inverse-on-surface shadow-lg text-body-sm font-body-sm opacity-0 transition-opacity duration-300 pointer-events-none z-50 flex items-center gap-2"
+      id="toast"
+      role="alert"
+      aria-live="polite"
+    >
+      <span class="material-symbols-outlined text-[18px] text-secondary-fixed">
+        check_circle
+      </span>
+      <span id="toast-message">¡Enlace copiado al portapapeles!</span>
+    </div>
+    <!-- Global initialization script -->
+    <script type="module">
+      import { initAll } from '../scripts/main.ts';
+      initAll();
+    </script>
+  </body>
 </html>

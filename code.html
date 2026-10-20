@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>¡Feliz Cumpleaños! - Una Carta Especial</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with configuration -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#a33443",
+            "on-surface-variant": "#574142",
+            "inverse-on-surface": "#f4f0ea",
+            "on-error": "#ffffff",
+            "surface": "#fdf9f3",
+            "on-error-container": "#93000a",
+            "tertiary": "#944523",
+            "on-primary": "#ffffff",
+            "on-secondary-container": "#754e00",
+            "secondary-container": "#fdc266",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#fffbff",
+            "surface-container-high": "#ebe8e2",
+            "tertiary-container": "#b35c39",
+            "surface-variant": "#e6e2dc",
+            "surface-tint": "#a63745",
+            "surface-bright": "#fdf9f3",
+            "tertiary-fixed-dim": "#ffb59a",
+            "primary-fixed-dim": "#ffb2b6",
+            "secondary-fixed-dim": "#f6bc61",
+            "surface-container": "#f1ede7",
+            "primary-container": "#c34c5a",
+            "on-tertiary-fixed-variant": "#793010",
+            "inverse-surface": "#31302d",
+            "on-secondary-fixed": "#281800",
+            "outline": "#8a7172",
+            "on-background": "#1c1c18",
+            "on-tertiary-fixed": "#370d00",
+            "on-tertiary": "#ffffff",
+            "on-surface": "#1c1c18",
+            "on-secondary": "#ffffff",
+            "secondary-fixed": "#ffddaf",
+            "background": "#fdf9f3",
+            "surface-container-low": "#f7f3ed",
+            "primary-fixed": "#ffdadb",
+            "on-primary-fixed": "#40000d",
+            "on-primary-fixed-variant": "#861e30",
+            "on-primary-container": "#fffbff",
+            "surface-container-highest": "#e6e2dc",
+            "secondary": "#805600",
+            "inverse-primary": "#ffb2b6",
+            "on-secondary-fixed-variant": "#614000",
+            "tertiary-fixed": "#ffdbce",
+            "error": "#ba1a1a",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#ddbfc0",
+            "surface-dim": "#dddad4"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1.25rem",
+            "margin-md": "2rem",
+            "gutter-md": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin-lg": "3rem"
+          },
+          "fontFamily": {
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "display-lg": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Playfair Display"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"]
+          },
+          "fontSize": {
+            "label-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "fontWeight": "400" }],
+            "headline-lg-mobile": ["1.75rem", { "lineHeight": "2.25rem", "fontWeight": "600" }],
+            "display-lg": ["3.5rem", { "lineHeight": "4rem", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["0.875rem", { "lineHeight": "1.4rem", "fontWeight": "400" }],
+            "body-md": ["1rem", { "lineHeight": "1.6rem", "fontWeight": "400" }],
+            "display-lg-mobile": ["2.5rem", { "lineHeight": "3rem", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "headline-md": ["1.5rem", { "lineHeight": "2rem", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .paper-texture {
+      background-color: #fdf9f3;
+      background-image: radial-gradient(#dca54c15 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+    .polaroid-shadow {
+      box-shadow: 0 12px 32px -4px rgba(58, 44, 42, 0.12), 0 4px 14px -2px rgba(220, 165, 76, 0.14);
+    }
+    .card-deckled {
+      box-shadow: 0 16px 40px -8px rgba(163, 52, 67, 0.12), 0 6px 18px -4px rgba(220, 165, 76, 0.15);
+    }
+    /* Confetti animation canvas styling */
+    #confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 100;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary-fixed selection:text-primary min-h-screen relative overflow-x-hidden paper-texture">
+<canvas id="confetti-canvas"></canvas>
+<!-- TopAppBar (Shared Component) -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/90 dark:bg-inverse-surface/90 backdrop-blur-md shadow-[0_4px_20px_-2px_rgba(217,93,106,0.12)]">
+<div class="flex justify-between items-center w-full px-margin md:px-margin-md max-w-[680px] mx-auto h-16">
+<!-- Leading Icon / Message -->
+<div class="flex items-center gap-space-xs text-primary dark:text-inverse-primary">
+<span class="material-symbols-outlined text-primary text-[24px]" style="font-variation-settings: 'FILL' 1;">cake</span>
+<span class="hidden sm:inline font-label-md text-label-md tracking-tight text-on-surface-variant">Un día muy especial</span>
+</div>
+<!-- App Bar Headline -->
+<h1 class="text-headline-md font-headline-md text-primary dark:text-primary-fixed text-center tracking-tight">
+        ¡Feliz Cumpleaños!
+      </h1>
+<!-- Trailing Audio Button -->
+<button aria-label="Reproducir melodía festiva" class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-high text-primary hover:text-primary dark:hover:text-primary-fixed transition-colors active:scale-95 transition-transform duration-150" id="audio-toggle">
+<span class="material-symbols-outlined text-[22px]" id="audio-icon">volume_up</span>
+</button>
+</div>
+</header>
+<!-- Main Responsive Container -->
+<main class="w-full max-w-[680px] mx-auto px-margin md:px-margin-md py-space-lg flex flex-col gap-space-xl">
+<!-- Hero / Portada de Cumpleaños -->
+<section class="relative flex flex-col items-center text-center pt-space-md">
+<!-- Decorative Stamp / Badge -->
+<div class="inline-flex items-center gap-space-xs px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed shadow-sm mb-space-md border border-secondary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-md text-label-md">Celebrando Tu Día</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">arrow_back_ios_new</span>
+</div>
+<!-- Main Greetings Title -->
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight mb-space-sm">
+        ¡Feliz Cumpleaños! 🎉
+      </h2>
+<!-- Caring Subtitle -->
+<p class="font-body-md text-body-md md:font-body-lg md:text-body-lg text-on-surface-variant max-w-md mx-auto leading-relaxed">
+        Celebrando tu vida, tus risas contagiosas y cada momento inolvidable compartido juntos.
+      </p>
+<!-- Envelope Illustrated Graphic Card -->
+<div class="w-full mt-space-lg relative">
+<div class="w-full bg-surface-container-lowest rounded-lg p-space-md border border-secondary-container/40 card-deckled transition-all hover:rotate-0 -rotate-1 relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary-fixed/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-36 h-36 bg-primary-fixed/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="border border-dashed border-secondary-container/70 rounded-DEFAULT p-space-md flex flex-col items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[42px]" style="font-variation-settings: 'FILL' 1;">markunread_mailbox</span>
+<span class="font-label-md text-label-md text-tertiary">Para alguien sumamente especial</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Abre con cariño cada recuerdo que preparamos para ti</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Carousel Section (Componente Principal de Recuerdos) -->
+<section aria-label="Carrusel de Recuerdos" class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]" style="font-variation-settings: 'FILL' 1;">photo_library</span>
+<h3 class="font-headline-md text-headline-md text-primary">Nuestros Recuerdos</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-3 py-1 rounded-full">
+          Desliza para ver más
+        </span>
+</div>
+<!-- Carousel Container -->
+<div class="relative w-full overflow-hidden select-none">
+<!-- Slides Wrapper -->
+<div class="flex transition-transform duration-500 ease-out" id="carousel-track">
+<!-- Slide 1: Polaroid Memory -->
+<div class="min-w-full px-2">
+<div class="bg-surface-container-lowest p-4 pb-6 rounded-DEFAULT polaroid-shadow border border-secondary-container/30 rotate-1 transition-transform hover:rotate-0 duration-300">
+<div class="w-full h-72 md:h-80 rounded-DEFAULT overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A warm and joyful candid portrait of happy friends laughing and hugging during an unforgettable golden hour mountain trip. The soft afternoon sunlight creates a luminous glowing rim around their silhouettes, with gentle pastel warm tones, champagne highlights, and creamy paper textured photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnZQ8qBLaeoVe6xfYmp1Dzp-vKiQ-h_2FXTHY1LRWtcJoNXyNPRxJcvZsNHwijQV3by98R6L5p5TWsCxQts-clvTzzHG88jmQtkBikTfS1eRSMxTWauxcVmFI5P2OLxXSxyuye2rMaonltSiVMuiBs_3Qb6d2w8TG_qJdu2it5B9C_0HnpsnXjIFZJnKqFjYSyB0joYHacR6bjvGJySE7x-daa6YmXobUsq7NjulqEbcNPVkXuotfSLw"/>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-primary border border-secondary-container/30 flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-sm text-label-sm">Inolvidable</span>
+</div>
+</div>
+<div class="mt-4 text-center">
+<p class="font-headline-md text-headline-md text-on-surface">Aquel viaje inolvidable</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">El mundo se ve más brillante cuando sonríes a carcajadas.</p>
+</div>
+</div>
+</div>
+<!-- Slide 2: Polaroid Memory -->
+<div class="min-w-full px-2">
+<div class="bg-surface-container-lowest p-4 pb-6 rounded-DEFAULT polaroid-shadow border border-secondary-container/30 -rotate-1 transition-transform hover:rotate-0 duration-300">
+<div class="w-full h-72 md:h-80 rounded-DEFAULT overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A spontaneous joyful celebration scene featuring a smiling birthday person in cozy knitwear blowing candles on a rustic strawberry cream cake surrounded by warm fairy lights. The background glows with ambient champagne golds and soft rose blush light, giving a heartfelt tactile editorial warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfwScNmetC7ElqVvkrFnSz--VrW1bAMC_dIaQusmBAOybTNBZgRquM2ep-_llW_2T4l1kDyOiXEuQxajsw33_2qNKWKfe7bh9E3jzUmNOlOs633VlI55ttKtc4PekCsRQISkbUe4IfEc0UpkjALC-ORIA-Mw7S4wiLZdUQReaZ4R9kKQ56AXJn8X1vuttHwT4Js7XeYqq-HqSDulFXgM0IfY9t54N4IEMp3OH1292ilFODaOWERLkeCA"/>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-secondary border border-secondary-container/30 flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">celebration</span>
+<span class="font-label-sm text-label-sm">Risas</span>
+</div>
+</div>
+<div class="mt-4 text-center">
+<p class="font-headline-md text-headline-md text-on-surface">Nuestras tardes de risas</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Donde los minutos vuelan y la felicidad siempre abunda.</p>
+</div>
+</div>
+</div>
+<!-- Slide 3: Polaroid Memory -->
+<div class="min-w-full px-2">
+<div class="bg-surface-container-lowest p-4 pb-6 rounded-DEFAULT polaroid-shadow border border-secondary-container/30 rotate-1 transition-transform hover:rotate-0 duration-300">
+<div class="w-full h-72 md:h-80 rounded-DEFAULT overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A heartfelt aesthetic scene of two best friends making a wish together outdoors while holding delicate glowing sparklers under a dusky sunset sky. Soft golden bokeh lights twinkle in the warm ambient air, rendered with gentle tactile paper aesthetics and warm rose gold colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqGJyLqG5LPmkcqFUHbCKgiRCJHi-8nUkmhOf_UQrROjyJjh8PKzMbUiqC1cxoRoySalZcHSR9YUODitgJAt6sK100sJIJwEivDYy7W6YRMQSH5JWGgkSC5tY4gI48iwBS-ELEaFihCDKbPJrZZsidYJ_6X5blF874PowXpz1huC3KqXAtKYrIp1x1La_deoLujCG4rEE_q9kwUZ074afnRCmGtg63T3-Inm2cVP3u9cB5khqP-f9vNw"/>
+<div class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-primary border border-secondary-container/30 flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-label-sm text-label-sm">Sueños</span>
+</div>
+</div>
+<div class="mt-4 text-center">
+<p class="font-headline-md text-headline-md text-on-surface">Haciendo tus sueños realidad</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Que este nuevo año cumpla todo lo que anhela tu gran corazón.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation Arrows (< & >) -->
+<button aria-label="Recuerdo anterior" class="absolute left-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-surface-container-lowest/90 text-primary shadow-md flex items-center justify-center hover:bg-surface-container-low active:scale-95 transition-all" id="prev-slide">
+<span class="material-symbols-outlined text-[24px]">chevron_left</span>
+</button>
+<button aria-label="Siguiente recuerdo" class="absolute right-3 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-surface-container-lowest/90 text-primary shadow-md flex items-center justify-center hover:bg-surface-container-low active:scale-95 transition-all" id="next-slide">
+<span class="material-symbols-outlined text-[24px]">chevron_right</span>
+</button>
+</div>
+<!-- Pagination Dots -->
+<div class="flex items-center justify-center gap-2 mt-space-xs">
+<button aria-label="Ir a diapositiva 1" class="dot-btn w-3 h-3 rounded-full bg-primary transition-all duration-300" data-index="0"></button>
+<button aria-label="Ir a diapositiva 2" class="dot-btn w-3 h-3 rounded-full bg-surface-variant transition-all duration-300" data-index="1"></button>
+<button aria-label="Ir a diapositiva 3" class="dot-btn w-3 h-3 rounded-full bg-surface-variant transition-all duration-300" data-index="2"></button>
+</div>
+</section>
+<!-- Carta Emotiva / Dedicatoria -->
+<section class="relative bg-surface-container-lowest rounded-lg p-6 md:p-10 border border-secondary-container/40 card-deckled">
+<!-- Wax seal ornament -->
+<div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md border-2 border-surface">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="pt-2 space-y-4">
+<div class="text-center pb-2 border-b border-surface-container-highest">
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Carta Dedicatoria</p>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Querida persona extraordinaria,</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Hoy no es un día cualquiera. Celebramos tu existencia, tu energía luminosa y el privilegio inmenso de compartir el camino a tu lado. Gracias por cada sonrisa sincera que regalas en los momentos sencillos y por ser un refugio de calma y alegría en los días difíciles.
+        </p>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Deseo de todo corazón que esta nueva vuelta al sol te colme de una salud inquebrantable, amores honestos, éxitos bien merecidos y esa felicidad auténtica que brota de vivir fiel a lo que te apasiona.
+        </p>
+<!-- Quote Block -->
+<blockquote class="my-6 p-4 rounded-DEFAULT bg-surface-container-low border-l-4 border-primary text-primary italic font-headline-md text-headline-md leading-relaxed text-center">
+          "Cumplir años no es envejecer, es acumular momentos dorados y mantener el corazón eternamente joven y curioso."
+        </blockquote>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Sigue persiguiendo tus metas con esa determinación tan tuya y nunca olvides lo valiosa e irrepetible que es tu historia.
+        </p>
+<!-- Signature -->
+<div class="pt-4 text-right">
+<p class="font-body-md text-body-md text-on-surface-variant italic">Con todo mi cariño y admiración sincera,</p>
+<p class="font-headline-md text-headline-md text-primary font-semibold mt-1">Siempre a tu lado ❤️</p>
+</div>
+</div>
+</section>
+<!-- Elementos Interactivos & Sorpresas -->
+<section class="flex flex-col gap-space-lg">
+<!-- Interactive Confetti & Wish Action -->
+<div class="bg-gradient-to-r from-primary-fixed to-secondary-fixed rounded-lg p-6 md:p-8 text-center flex flex-col items-center justify-center gap-space-md shadow-sm border border-secondary-container/40">
+<div class="w-16 h-16 rounded-full bg-surface flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">magic_button</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary">¡Haz un Deseo de Cumpleaños!</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Toca el botón mágico para celebrar con una lluvia festiva de confeti.</p>
+</div>
+<button class="px-8 py-3.5 rounded-full bg-gradient-to-r from-[#D95D6A] to-[#F08C65] text-white font-label-md text-label-md shadow-[0_8px_30px_-4px_rgba(217,93,106,0.25)] hover:opacity-95 active:scale-95 transition-all duration-150 flex items-center gap-2" id="confetti-btn">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">celebration</span>
+<span>Tocar para lanzar confeti 🎊</span>
+</button>
+</div>
+<!-- Deseos para tu nuevo año (Interactive Chips/Badges) -->
+<div class="bg-surface-container-low rounded-lg p-6 border border-secondary-container/20">
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="material-symbols-outlined text-secondary text-[22px]" style="font-variation-settings: 'FILL' 1;">award_star</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Mis Deseos Para Tu Nuevo Año</h4>
+</div>
+<div class="flex flex-wrap gap-2.5">
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[18px]">flight_takeoff</span>
+<span class="font-label-md text-label-md">Viajar más y explorar</span>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-lowest text-secondary border border-secondary-container shadow-sm">
+<span class="material-symbols-outlined text-[18px]">mood</span>
+<span class="font-label-md text-label-md">Sonreír siempre sin miedo</span>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-lowest text-tertiary border border-tertiary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[18px]">flag</span>
+<span class="font-label-md text-label-md">Nuevos retos cumplidos</span>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span class="font-label-md text-label-md">Paz interior y amor</span>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-surface-container-lowest text-secondary border border-secondary-container shadow-sm">
+<span class="material-symbols-outlined text-[18px]">savings</span>
+<span class="font-label-md text-label-md">Prosperidad y abundancia</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-space-xl bg-surface-container-low dark:bg-inverse-surface shadow-[0_-4px_20px_-2px_rgba(220,165,76,0.12)] shadow-sm">
+<div class="flex flex-col items-center justify-center gap-space-md text-center max-w-[680px] mx-auto px-margin">
+<!-- Interactive Share / Dedication Action Buttons -->
+<div class="flex flex-wrap justify-center items-center gap-space-sm w-full">
+<button class="px-5 py-2.5 rounded-full bg-surface text-primary border border-secondary-container/50 font-label-md text-label-md hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all active:scale-95 shadow-sm flex items-center gap-2" id="share-btn">
+<span class="material-symbols-outlined text-[18px]">share</span>
+          Compartir Recuerdo
+        </button>
+<button class="px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:text-primary-fixed transition-all active:scale-95 shadow-sm flex items-center gap-2" id="send-wish-btn">
+<span class="material-symbols-outlined text-[18px]">send</span>
+          Enviar un Deseo
+        </button>
+</div>
+<!-- Copyright Text verbatim from JSON -->
+<p class="text-body-sm font-body-sm text-on-surface-variant dark:text-surface-variant">
+        Hecho con todo el amor del mundo ❤️
+      </p>
+</div>
+</footer>
+<!-- Notification Toast for interactive feedback -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 px-5 py-2.5 rounded-full bg-inverse-surface text-inverse-on-surface shadow-lg text-body-sm font-body-sm opacity-0 transition-opacity duration-300 pointer-events-none z-50 flex items-center gap-2" id="toast">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed">check_circle</span>
+<span id="toast-message">¡Enlace copiado al portapapeles!</span>
+</div>
+<!-- Interactive Logic Script -->
+<script>
+    // --- Carousel Interaction ---
+    const track = document.getElementById('carousel-track');
+    const dots = document.querySelectorAll('.dot-btn');
+    const prevBtn = document.getElementById('prev-slide');
+    const nextBtn = document.getElementById('next-slide');
+    let currentSlide = 0;
+    const totalSlides = dots.length;
+
+    function updateCarousel(index) {
+      currentSlide = (index + totalSlides) % totalSlides;
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      
+      dots.forEach((dot, idx) => {
+        if (idx === currentSlide) {
+          dot.classList.remove('bg-surface-variant');
+          dot.classList.add('bg-primary', 'w-6');
+        } else {
+          dot.classList.remove('bg-primary', 'w-6');
+          dot.classList.add('bg-surface-variant', 'w-3');
+        }
+      });
+    }
+
+    prevBtn?.addEventListener('click', () => updateCarousel(currentSlide - 1));
+    nextBtn?.addEventListener('click', () => updateCarousel(currentSlide + 1));
+    
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const index = parseInt(dot.getAttribute('data-index') || '0', 10);
+        updateCarousel(index);
+      });
+    });
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 45) {
+        updateCarousel(currentSlide + 1);
+      } else if (touchEndX - touchStartX > 45) {
+        updateCarousel(currentSlide - 1);
+      }
+    }, { passive: true });
+
+    // --- Audio Ambient Melody Simulation ---
+    const audioBtn = document.getElementById('audio-toggle');
+    const audioIcon = document.getElementById('audio-icon');
+    let isPlayingAudio = false;
+    let audioCtx = null;
+    let melodyInterval = null;
+
+    function playNote(freq, start, duration) {
+      if (!audioCtx) return;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, start);
+      gain.gain.setValueAtTime(0.06, start);
+      gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start(start);
+      osc.stop(start + duration);
+    }
+
+    function playBirthdayChime() {
+      if (!audioCtx) return;
+      const now = audioCtx.currentTime;
+      // Soft ambient music box notes (Happy Birthday tune snippet)
+      const notes = [261.63, 261.63, 293.66, 261.63, 349.23, 329.63];
+      notes.forEach((freq, idx) => {
+        playNote(freq, now + idx * 0.35, 0.5);
+      });
+    }
+
+    audioBtn?.addEventListener('click', () => {
+      if (!isPlayingAudio) {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        playBirthdayChime();
+        melodyInterval = setInterval(playBirthdayChime, 4500);
+        audioIcon.innerText = 'music_note';
+        showToast('Música ambiental activada 🎵');
+        isPlayingAudio = true;
+      } else {
+        clearInterval(melodyInterval);
+        audioIcon.innerText = 'volume_up';
+        showToast('Música en pausa');
+        isPlayingAudio = false;
+      }
+    });
+
+    // --- Confetti Particle System ---
+    const canvas = document.getElementById('confetti-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    const colors = ['#D95D6A', '#F08C65', '#DCA54C', '#FDC266', '#FFB2B6', '#E6E2DC'];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class ConfettiParticle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * -canvas.height * 0.3;
+        this.size = Math.random() * 8 + 4;
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+        this.speedY = Math.random() * 3 + 2;
+        this.speedX = (Math.random() - 0.5) * 2;
+        this.rotation = Math.random() * 360;
+        this.rotationSpeed = (Math.random() - 0.5) * 5;
+        this.opacity = 1;
+      }
+      update() {
+        this.y += this.speedY;
+        this.x += this.speedX;
+        this.rotation += this.rotationSpeed;
+        if (this.y > canvas.height) {
+          this.opacity -= 0.02;
+        }
+      }
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate((this.rotation * Math.PI) / 180);
+        ctx.fillStyle = this.color;
+        ctx.globalAlpha = Math.max(0, this.opacity);
+        ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size * 0.7);
+        ctx.restore();
+      }
+    }
+
+    let confettiActive = false;
+    function renderConfetti() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach((p, index) => {
+        p.update();
+        p.draw();
+        if (p.opacity <= 0) {
+          particles.splice(index, 1);
+        }
+      });
+      if (particles.length > 0) {
+        requestAnimationFrame(renderConfetti);
+      } else {
+        confettiActive = false;
+      }
+    }
+
+    function burstConfetti(count = 90) {
+      for (let i = 0; i < count; i++) {
+        particles.push(new ConfettiParticle());
+      }
+      if (!confettiActive) {
+        confettiActive = true;
+        renderConfetti();
+      }
+    }
+
+    document.getElementById('confetti-btn')?.addEventListener('click', () => {
+      burstConfetti(110);
+      showToast('¡Felicidades y muchos deseos cumplidos! 🎊');
+    });
+
+    // --- Share & Wish Toast Feedback ---
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+    let toastTimeout;
+
+    function showToast(message) {
+      if (toastMsg) toastMsg.innerText = message;
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 3000);
+    }
+
+    document.getElementById('share-btn')?.addEventListener('click', () => {
+      if (navigator.share) {
+        navigator.share({
+          title: '¡Feliz Cumpleaños!',
+          text: 'Una hermosa carta digital llena de cariño para celebrar tu día.',
+          url: window.location.href,
+        }).catch(() => {});
+      } else {
+        navigator.clipboard?.writeText(window.location.href);
+        showToast('¡Enlace de la carta copiado con éxito! 💌');
+      }
+    });
+
+    document.getElementById('send-wish-btn')?.addEventListener('click', () => {
+      showToast('¡Tu abrazo y deseo han sido enviados con amor! ✨');
+      burstConfetti(45);
+    });
+  </script>
+</body></html>
